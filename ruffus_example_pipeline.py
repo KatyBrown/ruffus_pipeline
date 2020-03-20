@@ -185,7 +185,7 @@ def exampleSplit(infile, outfiles):
         i += 1
 
 
-@follows(exampleSplit, exampleCollate, exampleMerge)
+@follows(exampleSplit, exampleCollate)
 def basicRuffus():
     '''
     This is an example of a dummy task to run a subsection of a pipeline.
@@ -198,6 +198,7 @@ def basicRuffus():
     @follows because they will run automatically as the prerequisites to
     exampleSplit, exampleCollate and exampleMerge
     '''
+    pass
 
 
 @follows(mkdir("combinations"))
